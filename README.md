@@ -1,65 +1,50 @@
-### Как запустить проект
+<h1 align="center">Yatube API</h1>
 
-Клонировать репозиторий и перейти в него в командной строке:
+**YatubeAPI** — RESTful API для проекта [Yatube](https://github.com/ragimov700/Yatube).
+
+---
+
+### Возможности
+
+- Создавать посты
+- Комментировать
+- Подписываться на авторов
+
+Дополнительные возможности описаны в redoc-документации `/redoc`
+
+### Технологии
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
+
+### Установка:
+
+#### 1. Клонируйте репозиторий
 
 ```
-git clone https://github.com/ragimov700/api_final_yatube
+git clone https://github.com/ragimov700/YatubeAPI.git
 ```
 
-```
-cd api_final_yatube
-```
-
-Cоздать и активировать виртуальное окружение:
+#### 2. Создайте и активируйте виртуальное окружение
 
 ```
-python3 -m venv env
+python -m venv venv
+source venv/bin/activate
 ```
 
-```
-source env/bin/activate
-```
-
-Установить зависимости из файла requirements.txt:
-
-```
-python3 -m pip install --upgrade pip
-```
+#### 3. Установите зависимости
 
 ```
 pip install -r requirements.txt
 ```
 
-Выполнить миграции:
+#### 4. Примените миграции и запустите проект
 
 ```
-python3 manage.py migrate
+python yatube_api/manage.py migrate
+python yatube_api/manage.py runserver
 ```
+После чего проект будет доступен по адресу http://localhost:8000/
 
-Запустить проект:
-
-```
-python3 manage.py runserver
-```
-### Примеры запросов:
-Получить все посты (GET-метод):
-```
-http://127.0.0.1:8000/api/v1/posts/
-```
-Получить пост по id (GET-метод):
-```
-http://127.0.0.1:8000/api/v1/posts/{id}/
-```
-Получить комментарии к посту (GET-метод):
-```
-http://127.0.0.1:8000/api/v1/posts/{id}/comments/
-```
-Получить все группы (GET-метод):
-```
-http://127.0.0.1:8000/api/v1/groups/
-```
-### Документация
-Полная документация доступна по адресу:
-```
-http://127.0.0.1:8000/redoc/
-```
+---
+<h5 align="center">Автор проекта: <a href="https://github.com/ragimov700">Sherif Ragimov</a></h5>
